@@ -40,7 +40,7 @@
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
 				</div>
 				<!-- pagination -->
-				<div class="pagination"></div>
+				<div class="pagination">1,2,3</div>
 			</div>
 			<!-- content asaid -->
 			<div class="content-aside">
