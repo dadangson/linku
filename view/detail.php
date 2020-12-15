@@ -29,12 +29,53 @@
 	</div>
 
 	<!-- content -->
-	<div class="content">
+	<div class="contents">
 		<div class="container">
 			<!-- content main -->
 			<div class="content-main">
 				<div class="content-detail">
-					
+					<div class="content-detail-img">
+					  <img src="" alt="">
+					</div>
+					<div class="content-detail-title">
+					  <table>
+					    <tr>
+					      <td>Title</td>
+					      <td>: </td>
+					    </tr>
+					    <tr>
+					      <td>Actrist</td>
+					      <td>: </td>
+					    </tr>
+					    <tr>
+					      <td>Type</td>
+					      <td>: </td>
+					    </tr>
+					    <tr>
+					      <td>Release</td>
+					      <td>: </td>
+					    </tr>
+					    <tr>
+					      <td>Bit-rate</td>
+					      <td>: </td>
+					    </tr>
+					    <tr>
+					      <td>Size</td>
+					      <td>: </td>
+					    </tr>
+					  </table>
+					</div>
+					<div class="content-detail-action">
+					  <div class="action-buy"><a href="">Buy</a></div>
+					  <p>or</p>
+					  <div class="action-download">
+					    <a href="" class="zippyshare">Download here</a>
+					    <a href="" class="googledrive">Download here</a>
+					  </div>
+					</div>
+					<div class="content-detail-tag">
+					  <a href="" class="tag"></a>
+					</div>
 				</div>
 			</div>
 			<!-- content asaid -->
