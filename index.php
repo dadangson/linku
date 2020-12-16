@@ -23,7 +23,7 @@
 			</div>
 			<div class="header-search">
 				<div class="search"></div>
-				<div class="login"><a href="">Login</a></div>
+				<div class="login"><a href="view/login.php">Login</a></div>
 			</div>
 		</div>
 	</div>
@@ -34,7 +34,7 @@
 			<!-- content main -->
 			<div class="content-main">
 				<div class="content-item">
-					<div class="content-title">nama sudah ditambahkan</div>
+					<div class="content-title"><a href="view/detail.php">nama sudah ditambahkan</a></div>
 					<small>7 desember 2020</small>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>

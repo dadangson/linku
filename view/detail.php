@@ -23,7 +23,7 @@
 			</div>
 			<div class="header-search">
 				<div class="search"></div>
-				<div class="login"><a href="">Login</a></div>
+				<div class="login"><a href="login.php">Login</a></div>
 			</div>
 		</div>
 	</div>
@@ -32,12 +32,12 @@
 	<div class="contents">
 		<div class="container">
 			<!-- content main -->
-			<div class="content-main">
-				<div class="content-detail">
-					<div class="content-detail-img">
+			<div class="detail-main">
+				<div class="detail-wrapper">
+					<div class="detail-img">
 					  <img src="" alt="">
 					</div>
-					<div class="content-detail-title">
+					<div class="detail-title">
 					  <table>
 					    <tr>
 					      <td>Title</td>
@@ -65,7 +65,7 @@
 					    </tr>
 					  </table>
 					</div>
-					<div class="content-detail-action">
+					<div class="detail-action">
 					  <div class="action-buy"><a href="">Buy</a></div>
 					  <p>or</p>
 					  <div class="action-download">
@@ -73,13 +73,34 @@
 					    <a href="" class="googledrive">Download here</a>
 					  </div>
 					</div>
-					<div class="content-detail-tag">
+					<div class="detail-tag">
 					  <a href="" class="tag"></a>
+					</div>
+				</div>
+				<div class="comment-wrapper">
+					<div class="comment-header">
+						<div class="comment-title">Comments Here!</div>
+						<div class="comment-group">
+							<form action="" method="post" id="comment_form">
+								<div class="comment-control">
+									<textarea name="comment_content" id="comment_content" class="comment-content" rows="5" placeholder="Enter Comment"></textarea>
+								</div>
+								<div class="comment-control">
+									<input type="hidden" name="comment_id" id="comment_id" value="0">
+									<input type="submit" name="submit" id="submit" class="submit" value="Send">
+								</div>
+							</form>
+						</div>
+						<div class="comment-message">
+							<span id="comment_message"></span>
+							<div id="display_comment"></div>
+						</div>
+
 					</div>
 				</div>
 			</div>
 			<!-- content asaid -->
-			<div class="content-aside">
+			<div class="detail-aside">
 				<div class="aside-populer"></div>
 				<div class="aside-letter"></div>
 			</div>

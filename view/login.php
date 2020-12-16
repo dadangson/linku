@@ -16,7 +16,7 @@
 			<div class="header-logo"><a href="index.php">LinKu</a></div>
 			<div class="header-list">
 				<ul>
-					<li><a href="index.php">Home</a></li>
+					<li><a href="../index.php">Home</a></li>
 					<li><a href="view/list.php">List</a></li>
 					<li><a href="view/help.php">Help</a></li>
 				</ul>
@@ -43,9 +43,8 @@
                             <p>Password</p>
                             <input type="password" name="password" id="">
                         </div>
-                        div.
                         <div class="-login-button">
-                            <input type="submit" name="login" placeholder="Login" value="">
+                            <input type="submit" name="login" value="Login">
                         </div>
                     </form>
                 </div>
@@ -69,7 +68,7 @@
                             <input type="password" name="password2" id="">
                         </div>
                         <div class="register-button">
-                            <input type="submit" name="register" placeholder="Register" value="">
+                            <input type="submit" name="register" value="Register">
                         </div>
                     </form>
                 </div>
