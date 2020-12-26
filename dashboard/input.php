@@ -1,27 +1,3 @@
-<?php
-require 'functions.php';
-
-if( isset($_POST[" submit"]) ) {
-  //cek data inputan
-  if( input($_POST) > 0 ) {
-    echo "
-      <script>
-        alert('Data berhasil ditambahkan');
-        document.location.href = 'dashboard.php';
-      </script>
-    ";
-  } else {
-    echo "
-      <script>
-        alert('Data gagal ditambahkan');
-        document.location.href = 'dashboard.php';
-      </script>
-    ";
-  }
-}
-
-?>
-
 
 <!DOCTYPE html>
 <html>
@@ -45,11 +21,13 @@ if( isset($_POST[" submit"]) ) {
 			  <span>Nama Admin</span>
 			</div>
 			<div class="header-list">
+			  <span class="dashboard"><a href="dashboard.php">DASHBOARD</a></span>
 				<span class="database"><a href="database.php">DATABASE</a></span>
-        <span class="input"><a href="input.php">INPUT-DATA</a></span>
-        <span class="edit"><a href="edit.php">EDIT-DATA</a></span>
+        <span class="input"><a href="input.php">INPUT</a></span>
+        <span class="edit"><a href="update.php">UPDATE</a></span>
         <span class="accounts"><a href="accounts.php">ACCOUNTS</a></span>
         <span class="comments"><a href="comments.php">COMMENTS</a></span>
+        <span class="message"><a href="message.php">MESSAGE</a></span>
         <span class="logout"><a href="logout.php">LOG OUT</a></span>
                 
 			</div>
@@ -60,7 +38,11 @@ if( isset($_POST[" submit"]) ) {
 	<div class="content-right">
 		<div class="content">
 			<div class="content-title">Ini title</div>
-			<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa consequuntur labore officiis aut suscipit tempore exercitationem at repellendus, doloribus, aspernatur modi laborum quos fugiat error nobis sunt molestiae explicabo quaerat.</div>
+			<div>
+			  <form action="../process/process_input">
+			    
+			  </form>
+			</div>
 		</div>
 	</div>
 
