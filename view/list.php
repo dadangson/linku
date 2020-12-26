@@ -22,7 +22,14 @@
 				</ul>
 			</div>
 			<div class="header-search">
-				<div class="search"></div>
+				<div class="search-wrapper">
+				  <form action="" method="post">
+				    <span>
+				      <input type="text" name="keyword" class="search" placeholder="search here.." autocomplete="" >
+				      <button type="submit" name="search"><span class="fas fa-search"></span></button>
+				    </span>
+				  </form>
+				</div>
 				<div class="login"><a href="">Login</a></div>
 			</div>
 		</div>
