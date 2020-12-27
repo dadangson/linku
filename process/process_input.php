@@ -1,7 +1,7 @@
 <?php
 require '../config/functions.php';
 
-if( isset($_POST["submit"]) ) {
+if( isset($_POST["input"]) ) {
   //cek data inputan
   if( input($_POST) > 0 ) {
     echo "
