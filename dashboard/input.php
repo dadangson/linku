@@ -37,7 +37,7 @@
 	<!-- content -->
 	<div class="content-right">
 		<div class="content">
-			<div class="content-title">Ini title</div>
+			<div class="content-title">Input data items</div>
 			<div>
 			  <form action="../process/process_input" method="post" enctype="multipart/form-data">
 			    <table>
@@ -131,7 +131,7 @@
 			      </tr>
 			      <tr>
 			        <td>
-			          <button type="submit" name="submit">Send</button>
+			          <button type="submit" name="input">Send</button>
 			        </td>
 			      </tr>
 			    </table>
