@@ -1,3 +1,27 @@
+<?php
+session_start();
+
+// check cookie
+if( isset($_COOKIE['id'] && $_COOKIE['key']) ) {
+  $id = $_COOKIE['id'];
+  $key = $_COOKIE['key'];
+  
+  // get username and id
+  $result = mysqli_query(" SELECT username FROM users WHERE id = $id ");
+  $row = mysqli_fetch_assoc($result);
+  
+  // check cookie and username
+  if( $key === hash('sha256', $row['username']) ) {
+    $_SESSION['login'] = true;
+  }
+}
+
+if( isset($_SESSION['login']) ) {
+  header("location:../index.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,12 +60,16 @@
                 <div class="login">
                     <form action="../process/process_login.php" method="post">
                         <div class="login-username">
-                            <label for="log_username"></label>
+                            <label for="log_username">username</label>
                             <input type="text" name="username" id="log_username">
                         </div>
-                        <div class="password-password">
-                            <label for="log_pass"></label>
+                        <div class="login-password">
+                            <label for="log_pass">password</label>
                             <input type="password" name="password" id="log_pass">
+                        </div>
+                        <div class="login-remember">
+                          <input type="checkbox" name="remember" id="log_remember">
+                          <label for="log_remember">remember me</label>
                         </div>
                         <div class="-login-button">
                             <button type="submit" name="login">Login</button>
