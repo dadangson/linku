@@ -2,21 +2,6 @@
 session_start();
 require '../config/functions.php';
 
-// check cookie
-if( isset($_COOKIE['id'] && $_COOKIE['key']) ) {
-  $id = $_COOKIE['id'];
-  $key = $_COOKIE['key'];
-  
-  // get username and id
-  $result = mysqli_query(" SELECT username FROM users WHERE id = $id ");
-  $row = mysqli_fetch_assoc($result);
-  
-  // check cookie and username
-  if( $ key === hash('sha256', $row['username']) ) {
-    $_SESSION['login'] = true;
-  }
-}
-
 // check login
 if( isset($_POST['login']) ) {
   $username = $_POST['username'];
