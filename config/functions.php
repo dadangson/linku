@@ -35,7 +35,7 @@ function input($data) {
   
   $query = " INSERT INTO items
              VALUES
-            ('', '$title', '$actrist', '$type', '$release', '$bit_rate', '$size', '$buy', '$link1', '$link2', '$tags', '$image')";
+            ('', '$title', '$actrist', '$type', '$release', '$bit_rate', '$size', '$buy', '$link1', '$link2', '$tags', '$image') ";
   mysqli_query($conn, $query);
   
   return mysqli_affected_rows($conn);
@@ -90,7 +90,7 @@ function upload() {
 function delete($id) {
   global $conn;
   
-  mysqli_query($conn, " DELETE FROM items WHERE id = $id");
+  mysqli_query($conn, " DELETE FROM items WHERE id = $id ");
   
   return mysqli_affected_rows($conn);
 }
@@ -130,7 +130,7 @@ function update($data) {
               link2 = '$link2',
               tags = '$tags',
               image = '$image'
-            WHERE id = $id";
+            WHERE id = $id ";
   mysqli_query($conn, $query);
   
   return mysqli_affected_rows($conn);
@@ -142,6 +142,43 @@ function search($keyword) {
                title LIKE '%$title%'OR
                actrist LIKE '%$actrist%'OR
                tag LIKE '%$tags%'
-             ";
+           ";
   return query($query);
+}
+
+function register($data) {
+  global $conn;
+  
+  $username = strtolower(stripslashes($data['username']));
+  $email = strtolower($data['email']);
+  $password = mysqli_real_escape_string($conn, $data['password']);
+  $password2 = mysqli_real_escape_string($conn, $data['password2']);
+  
+  // check username
+  $result = mysqli_query($conn, " SELECT username FROM users WHERE username = '$username'" );
+  
+  if( mysqli_fetch_assoc($result) ) {
+    echo "
+        <script>
+          alert('Username sudah ada!');
+        </script>
+    ";
+    return false;
+  }
+  
+  // check password
+  if( $password !== $password2 ) {
+    echo "
+        <script>
+          alert('Konfirmasi password tidak sesuai!');
+        </script>
+    ";
+    return false;
+  }
+  
+  // encript password hash
+  $password = password_hash($password, PASSWORD_DEFAULT);
+  
+  // insert database
+  mysqli_query($conn, " INSERT INTO users VALUES('', 'username', 'email', 'password') ");
 }
