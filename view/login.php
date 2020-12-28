@@ -34,41 +34,41 @@
 			<!-- login & register form -->
 			<div class="login-wrapper">
                 <div class="login">
-                    <form action="" method="post">
+                    <form action="../process/process_login.php" method="post">
                         <div class="login-username">
-                            <p>Username</p>
-                            <input type="text" name="username" id="">
+                            <label for="log_username"></label>
+                            <input type="text" name="username" id="log_username">
                         </div>
                         <div class="password-password">
-                            <p>Password</p>
-                            <input type="password" name="password" id="">
+                            <label for="log_pass"></label>
+                            <input type="password" name="password" id="log_pass">
                         </div>
                         <div class="-login-button">
-                            <input type="submit" name="login" value="Login">
+                            <button type="submit" name="login">Login</button>
                         </div>
                     </form>
                 </div>
 
                 <div class="register">
-                    <form action="" method="post">
+                    <form action="../process/process_register.com" method="post">
                         <div class="register-username">
-                            <p>Username</p>
-                            <input type="text" name="username" id="">
+                            <label for="reg_username">username</label>
+                            <input type="text" name="username" id="reg_username">
                         </div>
                         <div class="register-email">
-                            <p>Email</p>
-                            <input type="email" name="email" id="">
+                            <label for="reg_email">email</label>
+                            <input type="email" name="email" id="reg_email">
                         </div>
                         <div class="register-password">
-                            <p>Password</p>
-                            <input type="password" name="password" id="">
+                            <label for="reg_pass">password</label>
+                            <input type="password" name="password" id="reg_pass">
                         </div>
                         <div class="register-confirm-password">
-                            <p>Password</p>
-                            <input type="password" name="password2" id="">
+                            <label for="reg_pass2">confirm password</label>
+                            <input type="password" name="password2" id="reg_pass2">
                         </div>
                         <div class="register-button">
-                            <input type="submit" name="register" value="Register">
+                            <button type="submit" name="register">Register</button>
                         </div>
                     </form>
                 </div>
