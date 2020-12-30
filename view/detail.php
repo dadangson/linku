@@ -22,7 +22,14 @@
 				</ul>
 			</div>
 			<div class="header-search">
-				<div class="search"></div>
+				<div class="search-wrapper">
+				  <form action="../process/process_search.php" method="post">
+				    <span>
+				      <input type="text" name="keyword" class="search" placeholder="search here.." autocomplete="" >
+				      <button type="submit" name="search"><span class="fas fa-search"></span></button>
+				    </span>
+				  </form>
+				</div>
 				<div class="login"><a href="login.php">Login</a></div>
 			</div>
 		</div>
@@ -74,9 +81,14 @@
 					  </div>
 					</div>
 					<div class="detail-tag">
+					  <p>Tags : </p>
+					  <?php ?>
 					  <a href="" class="tag"></a>
+					  <?php ?>
 					</div>
 				</div>
+				
+				<!-- form comments -->
 				<div class="comment-wrapper">
 					<div class="comment-header">
 						<div class="comment-title">Comments Here!</div>
