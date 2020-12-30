@@ -22,7 +22,14 @@
 				</ul>
 			</div>
 			<div class="header-search">
-				<div class="search"></div>
+				<div class="search-wrapper">
+				  <form action="../process/process_search.php" method="post">
+				    <span>
+				      <input type="text" name="keyword" class="search" placeholder="search here.." autocomplete="" >
+				      <button type="submit" name="search"><span class="fas fa-search"></span></button>
+				    </span>
+				  </form>
+				</div>
 				<div class="login"><a href="view/login.php">Login</a></div>
 			</div>
 		</div>
@@ -33,12 +40,15 @@
 		<div class="container">
 			<!-- content main -->
 			<div class="content-main">
+			  <?php ?>
 				<div class="content-item">
-					<div class="content-title"><a href="view/detail.php">nama sudah ditambahkan</a></div>
-					<small>7 desember 2020</small>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+					<div class="content-title">
+					  <a href="view/detail.php?"><?= $item['title']; ?></a>
+					</div>
+					<small><?= $item['upload']; ?></small>
 				</div>
+				<?php endforeach; ?>
+				
 				<!-- pagination -->
 				<div class="pagination">1,2,3</div>
 			</div>
